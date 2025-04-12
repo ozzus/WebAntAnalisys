@@ -1,0 +1,12 @@
+{
+  "version": "2.0",
+  "tests": [{
+    "name": "User Login",
+    "commands": [
+      {"command": "open", "target": "/login"},
+      {"command": "type", "target": "id=email", "value": "test@example.com"},
+      {"command": "click", "target": "css=.submit-btn"},
+      {"command": "assertText", "target": ".welcome", "value": "Welcome!"}
+    ]
+  }]
+}
