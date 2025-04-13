@@ -1,6 +1,6 @@
 import os
 import argparse
-from converter.side_parser import parse_side_file
+from converter.side_parser import parse_side_file  # Исправлено!
 from converter.gherkin_builder import build_gherkin
 
 def convert_side_to_gherkin(input_path: str, output_dir: str):
@@ -11,7 +11,7 @@ def convert_side_to_gherkin(input_path: str, output_dir: str):
             raise FileNotFoundError(f"Input file not found: {input_path}")
         
         # Парсинг и генерация
-        data = parse_side_file(input_path)
+        data = parse_side_file(input_path)  # Исправлено!
         gherkin = build_gherkin(data)
         
         # Создание выходной директории

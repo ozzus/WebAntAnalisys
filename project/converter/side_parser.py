@@ -18,8 +18,8 @@ def parse_side_file(file_path: str) -> Dict:
                             "value": cmd.get("value", "")
                         } for cmd in test.get("commands", [])
                     ]
-                }] for test in data.get("tests", [])
-            }]
+                }]  # Сценарий формируется из команд текущего теста
+            } for test in data.get("tests", [])]  # Цикл по тестам для создания features
         }
     
     except (FileNotFoundError, json.JSONDecodeError) as e:
